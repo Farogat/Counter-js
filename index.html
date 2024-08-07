@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<body>
+    <h1 id="number" style="margin-left: 13%;">0</h1>
+    <button id="decrease">decrease</button>
+    <button id="reset">reset</button>
+    <button id="increase">increase</button>
+    
+    <script>
+        const n=document.querySelector('#number')
+        const d=document.querySelector('#decrease')
+        const r=document.querySelector('#reset')
+        const i=document.querySelector('#increase')
+
+        let count=0;
+        d.onclick = function(){
+            count--;
+            n.textContent=count;
+        }
+        i.onclick = function(){
+            count++;
+            n.textContent=count;
+        }
+        r.onclick = function(){
+            count=0;
+            n.textContent=count;
+        }
+    </script>
+</body>
+</html>
